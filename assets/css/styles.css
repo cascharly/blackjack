@@ -36,8 +36,10 @@ body {
 @keyframes fadeIn {
   0% {
     opacity: 0;
+    padding-left: 20px;
   }
   100% {
     opacity: 1;
+    padding-left: 0px;
   }
 }

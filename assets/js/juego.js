@@ -79,25 +79,18 @@ const turnoComputadora = (puntosMinimos) => {
     }
   } while (puntosComputadora < puntosMinimos && puntosMinimos <= 21);
 
-  ///////////////////////
-  // const listaCartas = document.querySelector('#computadora-cartas').querySelector('img');
-  // console.log(listaCartas.length);
-
   function borrarCartas() {
     const listaCartas = document
       .querySelector("#computadora-cartas")
-      .querySelector("img.hide")
-    console.log(listaCartas);
+      .querySelector("img.hide");
     if (listaCartas) {
-        listaCartas.classList.remove("hide")
+      listaCartas.classList.remove("hide");
     } else {
       clearInterval(timer);
     }
   }
 
   const timer = setInterval(borrarCartas, 300);
-  // borrarCartas();
-  //////////////////////
 
   setTimeout(() => {
     if (puntosComputadora === puntosMinimos) {
@@ -130,12 +123,10 @@ btnPedir.addEventListener("click", () => {
   divCartasJugador.append(imgCarta);
 
   if (puntosJugador > 21) {
-    console.warn("Perdiste");
     btnPedir.disabled = true;
     btnDetener.disabled = true;
     turnoComputadora(puntosJugador);
   } else if (puntosJugador === 21) {
-    console.warn("21 Genial!!");
     btnPedir.disabled = true;
     btnDetener.disabled = true;
     turnoComputadora(puntosJugador);
