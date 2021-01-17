@@ -14,12 +14,30 @@ body {
 }
 
 .carta {
-    position: relative;
-    width: 150px;
-    left: 100px;
-    margin-left: -75px;
+  position: relative;
+  width: 150px;
+  left: 100px;
+  margin-left: -75px;
 }
 
-#computadora-cartas, #jugador-cartas {
-    height: 240px;
+.hide {
+  display: none
+}
+
+#computadora-cartas,
+#jugador-cartas {
+  height: 240px;
+}
+
+.fade-in {
+  animation: fadeIn ease .5s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
